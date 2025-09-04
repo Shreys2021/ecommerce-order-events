@@ -1,0 +1,8 @@
+com/example/orders/events/OrderCancelledEvent.class
+com/example/orders/events/Event.class
+com/example/orders/domain/Order.class
+com/example/orders/events/ShippingScheduledEvent.class
+com/example/orders/domain/Item.class
+com/example/orders/events/PaymentReceivedEvent.class
+com/example/orders/domain/Status.class
+com/example/orders/events/OrderCreatedEvent.class
