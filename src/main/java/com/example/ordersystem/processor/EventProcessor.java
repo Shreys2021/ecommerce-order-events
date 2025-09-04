@@ -7,16 +7,10 @@ import com.example.ordersystem.observer.Observer;
 
 import java.util.*;
 
-/**
- * EventProcessor applies business logic to incoming events
- * and updates the Order state accordingly.
- */
 public class EventProcessor {
 
-    // Keep all orders in memory (orderId → Order)
     private Map<String, Order> orders = new HashMap<>();
 
-    // Registered observers (Logger, Alert, etc.)
     private List<Observer> observers = new ArrayList<>();
 
     public void registerObserver(Observer observer) {
@@ -67,7 +61,6 @@ public class EventProcessor {
             if (event.getAmountPaid() >= order.getTotalAmount()) {
                 order.setStatus(Status.PAID);
             } else {
-                // Optional: support partially paid
                 order.setStatus(Status.PENDING);
                 System.out.println("⚠️ Order " + order.getOrderId() + " partially paid!");
             }

@@ -16,8 +16,6 @@ private double totalAmount = 0.0;
 
     private List<Event> eventHistory = new ArrayList<>();
 
-    // We'll add eventHistory later once events exist.
-
     public Order() { }
 
     public Order(String orderId, String customerId, List<Item> items, double totalAmount) {
